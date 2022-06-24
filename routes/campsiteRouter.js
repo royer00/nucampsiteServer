@@ -37,6 +37,7 @@ campsiteRouter.route('/')
     .catch(err => next(err));
 });
 
+// campsites/campsiteId
 campsiteRouter.route('/:campsiteId')
 .get((req, res, next) => {
     Campsite.findById(req.params.campsiteId)
